@@ -1,0 +1,129 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 40px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.abs {
+  position: absolute;
+  bottom: -10px;
+  border-radius: 12px;
+  background: greenyellow;
+  padding: 2px;
+  width: 75px;
+}
+
+.cardLong {
+  background: #fff;
+  border-radius: 12px;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  width: 250px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.gap {
+  display: flex;
+  gap: 12px;
+}
+
+.shape {
+  width: 80px;
+  height: 80px;
+  background: gray;
+  position: relative;
+}
+.shape:focus {
+  outline: 2px #999;
+  outline-offset: 2px;
+}
+.shape:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 80px solid gray;
+}
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 80px solid gray;
+}
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-right: 80px solid gray;
+}
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-left: 80px solid gray;
+}
+
+/* Circle & ellipse */
+.circle {
+  border-radius: 50%;
+}
+.ellipse {
+  width: 120px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+/* Rectangle, square, etc. */
+.square {
+  width: 70px;
+  height: 70px;
+}
+.rectangle {
+  width: 120px;
+  height: 60px;
+}
+.parallelogram {
+  width: 120px;
+  height: 60px;
+  transform: skew(20deg);
+}
+.trapezoid {
+  width: 0;
+  border-bottom: 80px solid gray;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+}

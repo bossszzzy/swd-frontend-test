@@ -1,0 +1,41 @@
+.body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 300px;
+}
+
+.button {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 45px 100px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.button:hover {
+  transform: scale(1.03);
+}
+
+.gap {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: left;
+}
