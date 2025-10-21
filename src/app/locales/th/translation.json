@@ -1,5 +1,25 @@
 {
-  "Homepage": {
-    "title": "แบบทดสอบที่ 1"
+  "menu": "เปลี่ยนภาษา",
+  "langEn": "อังกฤษ",
+  "langTh": "ไทย",
+  "homepage": {
+    "title": { "test1": "แบบทดสอบที่ 1", "test2": "แบบทดสอบที่ 2" },
+    "description": { "desc1": "การจัดการหน้าเว็บ", "desc2": "การเชื่อมต่อ API" }
+  },
+  "test1": {
+    "moveShape": "เลื่อนรูปแบบ",
+    "movePosition": "เปลี่ยนตำแหน่ง"
+  },
+  "test2": {
+    "edit": "แก้ไขข้อมูล",
+    "delete": "ลบข้อมูล",
+    "firstName": "ชื่อจริง",
+    "lastName": "นามสกุล",
+    "email": "อีเมลล์",
+    "age": "อายุ",
+    "create": "สร้าง",
+    "update": "แก้ไข",
+    "clear": "ล้าง",
+    "manage": "จัดการ"
   }
 }

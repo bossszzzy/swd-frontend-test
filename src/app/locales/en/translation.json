@@ -1,5 +1,25 @@
 {
-  "Homepage": {
-    "title": "TEST1"
+  "menu": "Change Language",
+  "langEn": "Eng",
+  "langTh": "Thai",
+  "homepage": {
+    "title": { "test1": "Test 1", "test2": "Test 2" },
+    "description": { "desc1": "Layout & Styles", "desc2": "Connect API" }
+  },
+  "test1": {
+    "moveShape": "Move Shape",
+    "movePosition": "Move Postition"
+  },
+  "test2": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "firstName": "Firstname",
+    "lastName": "Lastname",
+    "email": "E-mail",
+    "age": "Age",
+    "create": "Create",
+    "update": "Update",
+    "clear": "clear",
+    "manage": "Manage"
   }
 }

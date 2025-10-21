@@ -18,8 +18,8 @@
   bottom: -10px;
   border-radius: 12px;
   background: greenyellow;
-  padding: 2px;
-  width: 75px;
+  padding: 0px 8px;
+  width: max-content;
 }
 
 .cardLong {

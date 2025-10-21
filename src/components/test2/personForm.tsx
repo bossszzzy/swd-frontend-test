@@ -1,5 +1,5 @@
 "use client";
-import { Button, Card, Form, Input, InputNumber, Space } from "antd";
+import { Button, Form, Input, InputNumber, Space } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/app/store";
 import {
@@ -9,20 +9,18 @@ import {
   updatePerson,
 } from "@/features/peopleSlice";
 
+import { useTranslation } from "react-i18next";
+
 export default function PersonForm() {
   const dispatch = useDispatch();
   const form = useSelector((s: RootState) => s.people.form);
-
+  const { t } = useTranslation();
   const onFinish = () => {
     if (form.id) dispatch(updatePerson());
     else dispatch(createPerson());
   };
 
   return (
-    <Card
-      title={form.id ? "Edit Person" : "Create Person"}
-      style={{ maxWidth: 520 }}
-    >
       <Form
         layout="vertical"
         initialValues={form}
@@ -31,39 +29,38 @@ export default function PersonForm() {
         key={form.id || "create"} // reset fields on editing swap
       >
         <Form.Item
-          label="First name"
+          label={t("test2.firstName")}
           name="firstName"
           rules={[{ required: true, message: "Required" }]}
         >
           <Input placeholder="John" />
         </Form.Item>
         <Form.Item
-          label="Last name"
+          label={t("test2.lastName")}
           name="lastName"
           rules={[{ required: true, message: "Required" }]}
         >
           <Input placeholder="Doe" />
         </Form.Item>
         <Form.Item
-          label="Email"
+          label={t("test2.email")}
           name="email"
           rules={[{ required: true, type: "email", message: "Valid email" }]}
         >
           <Input placeholder="john@company.com" />
         </Form.Item>
-        <Form.Item label="Age" name="age">
+        <Form.Item label={t("test2.age")} name="age">
           <InputNumber style={{ width: "100%" }} min={0} max={120} />
         </Form.Item>
 
         <Space>
           <Button type="primary" htmlType="submit">
-            {form.id ? "Update" : "Create"}
+            {form.id ? t("test2.update") : t("test2.create")}
           </Button>
           <Button htmlType="button" onClick={() => dispatch(clearForm())}>
-            Clear
+            {t("test2.clear")}
           </Button>
         </Space>
       </Form>
-    </Card>
   );
 }

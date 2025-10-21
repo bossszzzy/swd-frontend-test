@@ -4,18 +4,20 @@ import type { ColumnsType } from "antd/es/table";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/app/store";
 import { deletePerson, loadFormFromPerson } from "@/features/peopleSlice";
+import { useTranslation } from "react-i18next";
 
 export default function PeopleTable() {
   const dispatch = useDispatch();
   const data = useSelector((s: RootState) => s.people.items);
+  const { t } = useTranslation();
 
   const columns: ColumnsType = [
-    { title: "First name", dataIndex: "firstName" },
-    { title: "Last name", dataIndex: "lastName" },
-    { title: "Email", dataIndex: "email" },
-    { title: "Age", dataIndex: "age", width: 80 },
+    { title: t("test2.firstName"), dataIndex: "firstName" },
+    { title: t("test2.lastName"), dataIndex: "lastName" },
+    { title: t("test2.email"), dataIndex: "email" },
+    { title: t("test2.age"), dataIndex: "age", width: 80 },
     {
-      title: "Actions",
+      title: t("test2.manage"),
       key: "actions",
       width: 180,
       render: (_, record) => (
@@ -24,16 +26,16 @@ export default function PeopleTable() {
             size="small"
             onClick={() => dispatch(loadFormFromPerson(record.id))}
           >
-            Edit
+            {t("test2.edit")}
           </Button>
           <Popconfirm
             title="Delete this person?"
             okText="Delete"
             okButtonProps={{ danger: true }}
             onConfirm={() => dispatch(deletePerson(record.id))}
-          >
+            >
             <Button size="small" danger>
-              Delete
+            {t("test2.delete")}
             </Button>
           </Popconfirm>
         </Space>
@@ -46,11 +48,6 @@ export default function PeopleTable() {
       rowKey="id"
       columns={columns}
       dataSource={data}
-      pagination={{
-        pageSize: 5,
-        showSizeChanger: true,
-        pageSizeOptions: [5, 10, 20],
-      }}
     />
   );
 }

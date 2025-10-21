@@ -5,7 +5,8 @@ import { AntdRegistry } from "@ant-design/nextjs-registry";
 import DropdownComponent from "@/components/dropdown";
 import styles from "./page.module.css";
 import Providers from "./providers";
-import "./i18n"
+import "./i18n";
+import Link from "next/link";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,6 +35,12 @@ export default function RootLayout({
         <AntdRegistry>
           <div className={styles.body}>
             <DropdownComponent />
+            <Link
+              href={"/"}
+              style={{ display: "flex", justifyContent: "flex-end" }}
+            >
+              Home
+            </Link>
             <Providers>{children}</Providers>
           </div>
         </AntdRegistry>
